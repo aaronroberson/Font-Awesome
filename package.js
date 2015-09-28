@@ -18,7 +18,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(['METEOR@0.9.0', 'METEOR@1.0']); // Meteor versions
 
-  api.addFiles([
+  api.addAssets([
   	// We bundle all font files, but the client will request only one of them via the CSS @font-face rule
     'fonts/fontawesome-webfont.eot',   // IE8 or older only understands EOT. IE9+ will read it too because it loads the first occurrence of `src`
     'fonts/fontawesome-webfont.svg',   // SVG fallback for iOS < 5 - http://caniuse.com/#feat=svg-fonts, http://stackoverflow.com/a/11002874/1269037
@@ -26,7 +26,7 @@ Package.onUse(function(api) {
     'fonts/fontawesome-webfont.woff',  // Most modern browsers
     'fonts/fontawesome-webfont.woff2', // Chrome 36+, Opera 23+; improves compression
     'fonts/FontAwesome.otf'
-  ], where, {isAsset: true});
+  ], where);
 
   api.addFiles([
   	'scss/_animated.scss',
@@ -40,8 +40,7 @@ Package.onUse(function(api) {
   	'scss/_path.scss',
   	'scss/_rotated-flipped.scss',
   	'scss/_stacked.scss',
-  	'scss/_stacked.scss',
   	'scss/_variables.scss',
   	'scss/font-awesome.scss'
-  ], where, {isAsset: true});
+  ], where);
 });
